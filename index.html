@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg" />
+    <title>order food panel</title>
+  </head>
+  <body>
+    <main>
+      <section id="welcome_view">
+        <div class="wrapper">
+          <h1>Witaj,</h1>
+          <h2>Na co masz dzisiaj ochotę?</h2>
+          <div class="buttons_container_">
+            <button onclick="goToOrderingView()">Złóż zamówienie</button>
+            <button onclick="goToFinalViewFromWelcomeView()">
+              Lista zamówień
+            </button>
+          </div>
+        </div>
+      </section>
+      <section id="ordering_view">
+        <div class="wrapper">
+          <nav>
+            <img
+              onclick="goToWelcomeView()"
+              class="logo"
+              src="./images/tasty_food_logo.svg"
+              alt="logo"
+            />
+            <ul>
+              <li class="btns active">Burgery</li>
+              <li class="btns">Wrapy</li>
+              <li class="btns">Sałatki</li>
+              <li class="btns">Napoje</li>
+              <li class="btns">Dodatki</li>
+            </ul>
+            <div class="summary_container">
+              <p><span id="total_price">0.00</span> zł</p>
+              <button onclick="goToSummaryView()" id="summary" class="btns">
+                Podsumowanie
+              </button>
+            </div>
+          </nav>
+          <div class="products_panel">
+            <div class="category burgers">
+              <div class="product">
+                <h2 class="product_h2">bbq</h2>
+                <img class="product_img" src="./images/bbq.png" alt="dish" />
+                <p class="product_price"><span>16.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">cheeseburger</h2>
+                <img
+                  class="product_img"
+                  src="./images/cheeseburger.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>10.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">colorado</h2>
+                <img
+                  class="product_img"
+                  src="./images/colorado.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>14.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">hamburger</h2>
+                <img
+                  class="product_img"
+                  src="./images/hamburger.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>8.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">italiano</h2>
+                <img
+                  class="product_img"
+                  src="./images/italiano.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>18.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">kurczakburger</h2>
+                <img
+                  class="product_img"
+                  src="./images/kurczakburger.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>10.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">texas</h2>
+                <img class="product_img" src="./images/texas.png" alt="dish" />
+                <p class="product_price"><span>15.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">vegeburger</h2>
+                <img
+                  class="product_img"
+                  src="./images/vegeburger.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>12.00</span> zł</p>
+              </div>
+            </div>
+            <div class="category wraps">
+              <div class="product">
+                <h2 class="product_h2">bekon</h2>
+                <img class="product_img" src="./images/bekon.png" alt="dish" />
+                <p class="product_price"><span>13.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">klasyczny</h2>
+                <img
+                  class="product_img"
+                  src="./images/klasyczny.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>11.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">vege</h2>
+                <img class="product_img" src="./images/vege.png" alt="dish" />
+                <p class="product_price"><span>11.00</span> zł</p>
+              </div>
+            </div>
+            <div class="category salads">
+              <div class="product">
+                <h2 class="product_h2">amerykańska</h2>
+                <img
+                  class="product_img"
+                  src="./images/amerykanska.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>12.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">grecka</h2>
+                <img class="product_img" src="./images/grecka.png" alt="dish" />
+                <p class="product_price"><span>12.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">polska</h2>
+                <img class="product_img" src="./images/polska.png" alt="dish" />
+                <p class="product_price"><span>8.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">wiosenna</h2>
+                <img
+                  class="product_img"
+                  src="./images/wiosenna.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>8.00</span> zł</p>
+              </div>
+            </div>
+            <div class="category drinks">
+              <div class="product">
+                <h2 class="product_h2">cola</h2>
+                <img class="product_img" src="./images/cola.png" alt="dish" />
+                <p class="product_price"><span>8.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">kawa</h2>
+                <img class="product_img" src="./images/kawa.png" alt="dish" />
+                <p class="product_price"><span>7.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">lemoniada</h2>
+                <img
+                  class="product_img"
+                  src="./images/lemoniada.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>5.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">sok pomarańczowy</h2>
+                <img
+                  class="product_img"
+                  src="./images/sok_pomaranczowy.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>5.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">woda</h2>
+                <img class="product_img" src="./images/woda.png" alt="dish" />
+                <p class="product_price"><span>3.00</span> zł</p>
+              </div>
+            </div>
+            <div class="category extras">
+              <div class="product">
+                <h2 class="product_h2">frytki małe</h2>
+                <img
+                  class="product_img"
+                  src="./images/frytki_male.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>4.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">frytki duże</h2>
+                <img
+                  class="product_img"
+                  src="./images/frytki_duze.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>6.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">frytki xxl</h2>
+                <img
+                  class="product_img"
+                  src="./images/frytki_xxl.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>8.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">krążki cebulowe</h2>
+                <img
+                  class="product_img"
+                  src="./images/krazki_cebulowe.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>5.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">nuggetsy</h2>
+                <img
+                  class="product_img"
+                  src="./images/nuggetsy.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>8.00</span> zł</p>
+              </div>
+              <div class="product">
+                <h2 class="product_h2">zestaw sosów</h2>
+                <img
+                  class="product_img"
+                  src="./images/sosy_zestaw.png"
+                  alt="dish"
+                />
+                <p class="product_price"><span>3.00</span> zł</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="focus_container">
+          <div class="product_focus">
+            <h2 id="product_name">bbq</h2>
+            <img id="product_img" src="./images/bbq.png" alt="dish" />
+            <p id="product_price"><span>16.00</span> zł</p>
+            <div class="product_buttons_container">
+              <button id="prev">-</button>
+              <span id="result">1</span>
+              <button id="next">+</button>
+            </div>
+            <div class="product_options_container">
+              <button id="back">Anuluj</button>
+              <button id="confirm_product">Dodaj</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="summary_view">
+        <div class="wrapper">
+          <h2 class="orders_title">Podsumowanie zamówienia</h2>
+          <div class="orders_container">
+            <div class="orders_products"></div>
+            <p class="orders_value">
+              Suma: <span id="summaryTotalPrice">35,45 zł</span>
+            </p>
+            <div class="orders_buttons_container">
+              <button onclick="goToOrderingView()" class="orders_button_back">
+                Powrót
+              </button>
+              <button onclick="goToFinalView()" class="orders_button_confirm">
+                Płatność
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="final_view">
+        <div class="wrapper">
+          <h2 class="final_title">Numery zamówień</h2>
+          <div class="final_container">
+            <div class="number_container">
+              <span class="number_order">1</span>
+            </div>
+          </div>
+          <button onclick="goToWelcomeView()">Złóż zamówienie</button>
+        </div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

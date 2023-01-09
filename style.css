@@ -1,0 +1,546 @@
+:root {
+  --yellow: #ffb800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* =================< WELCOME VIEW >================= */
+
+#welcome_view {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/background.png);
+  background-size: cover;
+  overflow: hidden;
+}
+
+#welcome_view .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+}
+
+#welcome_view h1 {
+  font-size: 70px;
+  color: var(--yellow);
+}
+
+#welcome_view h2 {
+  font-size: 50px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+#welcome_view button {
+  width: 220px;
+  padding: 10px 0;
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+}
+
+#welcome_view button:nth-of-type(1) {
+  background-color: var(--yellow);
+  margin-right: 10px;
+}
+
+#welcome_view button:nth-of-type(2) {
+  background-color: transparent;
+}
+
+/* =================< ORDERING VIEW >================= */
+
+#ordering_view {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: none;
+}
+
+#ordering_view .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+#ordering_view nav {
+  position: relative;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+  background-color: #221e16;
+}
+
+#ordering_view .logo {
+  width: 200px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+#ordering_view ul {
+  width: 80%;
+  max-height: 560px;
+  overflow: scroll;
+}
+
+#ordering_view li {
+  list-style: none;
+}
+
+#ordering_view .btns {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  padding: 10px 0;
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  margin: 0 0 20px 0;
+  cursor: pointer;
+}
+
+#ordering_view .active {
+  background-color: var(--yellow);
+}
+
+#ordering_view .summary_container {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#ordering_view p {
+  font-size: 25px;
+  color: #fff;
+  margin: 50px 0 10px 0;
+}
+
+#ordering_view #summary {
+  width: 80%;
+  background-color: var(--yellow);
+}
+
+#ordering_view .products_panel {
+  width: calc(100% - 300px);
+  height: 100%;
+  background-image: url(./images/background_light.png);
+  background-size: cover;
+  overflow: scroll;
+}
+
+#ordering_view .category {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 25px;
+}
+
+#ordering_view .category.wraps,
+#ordering_view .category.salads,
+#ordering_view .category.drinks,
+#ordering_view .category.extras {
+  display: none;
+}
+
+#ordering_view .product {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  margin: 25px;
+  border-radius: 20px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#ordering_view .product_h2 {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#ordering_view .product_img {
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 200px;
+  max-height: 180px;
+}
+
+#ordering_view .product_price {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  color: #000;
+  z-index: 1;
+}
+
+#ordering_view #focus_container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.642);
+  z-index: 10;
+  display: none;
+}
+
+#ordering_view #focus_container.active {
+  display: block;
+}
+
+#ordering_view .product_focus {
+  width: 400px;
+  height: 500px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 38px;
+  background-color: #fff;
+}
+
+#ordering_view #product_name {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+#ordering_view #product_img {
+  position: absolute;
+  top: calc(50% - 70px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 250px;
+  max-height: 220px;
+}
+
+#ordering_view #product_price {
+  position: absolute;
+  top: calc(50% + 25px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+#ordering_view .product_buttons_container {
+  position: absolute;
+  top: calc(50% + 125px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid var(--yellow);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#ordering_view #prev,
+#ordering_view #next {
+  width: 50px;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+#ordering_view #result {
+  width: 50px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+#ordering_view .product_options_container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+#ordering_view #back {
+  font-size: 20px;
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  padding: 10px 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+#ordering_view #confirm_product {
+  font-size: 20px;
+  border: 2px solid var(--yellow);
+  border-radius: 50px;
+  padding: 10px 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: var(--yellow);
+  color: #fff;
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+/* =================< SUMMARY VIEW >================= */
+
+#summary_view {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/background_dark.jpeg);
+  background-size: cover;
+  overflow: hidden;
+  display: none;
+}
+
+#summary_view .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#summary_view .orders_title {
+  font-size: 34px;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+#summary_view .orders_container {
+  position: relative;
+  background-color: #fff;
+  width: 800px;
+  height: 400px;
+  border-radius: 38px;
+  padding: 15px 20px;
+}
+
+#summary_view .orders_products {
+  max-height: 240px;
+  overflow: scroll;
+}
+
+#summary_view .orders_product {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid #000;
+}
+
+#summary_view h3 {
+  width: 300px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+#summary_view .orders_options_container {
+  height: 40px;
+  border: 2px solid var(--yellow);
+  border-radius: 20px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#summary_view .orders_decrease,
+#summary_view .orders_increase {
+  width: 50px;
+  height: 100%;
+  font-size: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+}
+#summary_view .orders_result {
+  width: 40px;
+  text-align: center;
+  font-size: 25px;
+}
+#summary_view .orders_price {
+  height: 40px;
+  width: 140px;
+  line-height: 40px;
+  font-size: 25px;
+  text-align: center;
+  background-color: var(--yellow);
+  border-radius: 20px;
+  margin: 0 20px;
+}
+#summary_view .orders_remove {
+  height: 40px;
+  width: 140px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid var(--yellow);
+  cursor: pointer;
+}
+#summary_view .orders_value {
+  text-align: right;
+  font-size: 25px;
+  margin-top: 20px;
+}
+#summary_view .orders_value span {
+  display: inline-block;
+  height: 40px;
+  width: 140px;
+  line-height: 40px;
+  text-align: center;
+  background-color: var(--yellow);
+  border-radius: 20px;
+  margin-left: 10px;
+}
+#summary_view .orders_buttons_container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+#summary_view .orders_button_back {
+  width: 220px;
+  padding: 10px 0;
+  border: 2px solid var(--yellow);
+  background-color: #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+}
+#summary_view .orders_button_confirm {
+  width: 220px;
+  padding: 10px 0;
+  border: 2px solid var(--yellow);
+  background-color: #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+  margin-left: 20px;
+  background-color: var(--yellow);
+}
+
+/* =================< FINAL VIEW >================= */
+
+#final_view {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/background_dark.jpeg);
+  background-size: cover;
+  overflow: hidden;
+  display: none;
+}
+
+#final_view .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#final_view .final_title {
+  font-size: 34px;
+  color: var(--yellow);
+  margin-bottom: 20px;
+}
+
+#final_view .final_container {
+  width: 580px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 20px;
+  border-radius: 38px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  overflow: scroll;
+}
+
+#final_view .number_container {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  background-color: #fff;
+  border: 2px solid var(--yellow);
+  border-radius: 50%;
+}
+
+#final_view .number_order {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#final_view button {
+  width: 220px;
+  padding: 10px 0;
+  border: 2px solid var(--yellow);
+  background-color: #fff;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--yellow);
+}
