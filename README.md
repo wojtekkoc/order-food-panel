@@ -24,7 +24,3 @@ Order Food App to aplikacja webowa imitująca system zamawiania w restauracji, p
 Aby skorzystać z Order Food App, odwiedź proszę poniższy link:
 
 [Order Food App](https://kreatywnapasja.pl/projekty/wsb/order-food-app/)
-
-## Kontakt
-
-Jeśli masz jakieś pytania lub opinie, nie wahaj się skontaktować. Życzę udanych zamówień!
