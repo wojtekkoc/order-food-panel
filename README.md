@@ -8,16 +8,16 @@ Order Food App to aplikacja webowa imitująca system zamawiania w restauracji, p
 
 ## Kluczowe funkcje
 
-- Ekran powitalny
-- Kategorie nawigacji
-- Skupienie na produkcie
-- Dostosowywanie ilości produktu
-- Podsumowanie zamówienia
-- Modyfikacja zamówienia
-- Usuwanie produktów
-- Finalizowanie zamówienia
-- Obsługa wielu zamówień
-- Responsywny design
+- Ekran powitalny: Wyświetla początkowy ekran powitalny i zapewnia płynne przejście do procesu zamawiania.
+- Kategorie nawigacji: Umożliwia użytkownikom poruszanie się po różnych kategoriach dań, zapewniając przyjazne dla użytkownika przeglądanie.
+- Skupienie na produkcie: Zapewnia skupiony widok wybranego produktu, w tym nazwy, obrazu i ceny.
+- Dostosowywanie ilości produktu: Umożliwia użytkownikom zwiększenie lub zmniejszenie ilości wybranego produktu przed dodaniem go do zamówienia.
+- Podsumowanie zamówienia: Generuje podsumowanie wybranych produktów, wyświetlając ich nazwy, ilości, ceny i łączną wartość zamówienia.
+- Modyfikacja zamówienia: Pozwala użytkownikom modyfikować ilość produktów w podsumowaniu zamówienia, zapewniając elastyczność procesu zamawiania.
+- Usuwanie produktów: Umożliwia użytkownikom usunięcie konkretnych produktów z podsumowania zamówienia, jeśli jest taka potrzeba.
+- Finalizowanie zamówienia: Przekierowuje użytkowników do widoku końcowego, gdzie zamówienie jest potwierdzane i przygotowywane do płatności.
+- Obsługa wielu zamówień: Obsługuje możliwość składania wielu zamówień, umożliwiając użytkownikom składanie zamówień w trakcie jednej sesji.
+- Responsywny design: Zapewnia płynne i spójne doświadczenie na różnych urządzeniach i rozmiarach ekranu.
 
 ## Dostęp do aplikacji
 
